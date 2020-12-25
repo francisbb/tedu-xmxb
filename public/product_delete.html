@@ -1,0 +1,33 @@
+<!DOCTYPE HTML5>
+<head>
+ <script>
+     function show(){
+         //获取用户数据
+         var _pid=pid.value;
+         //创建xhr对象
+         var xhr= new XMLHttpRequest();
+         //打开监听器，监听响应状态
+         xhr.onreadystatechange=function(){
+					 console.log(xhr)
+             if(xhr.readyState==4 && xhr.status==200){
+							 console.log(1);
+                 var r=xhr.responseText;
+                 if(r==1){
+                     msg.innerHTML="删除成功";
+                 }else{
+                     msg.innerHTML="删除失败";
+                 }
+             }
+         }
+         //打开链接
+         xhr.open('delete',`/product/delete/${_pid}`,true)
+        //发送请求
+        xhr.send();
+     }
+ </script>
+</head>
+<body>
+    <input type="text" id="pid">
+    <button onclick="show()">提交</button>
+    <div id="msg"></div>
+</body>

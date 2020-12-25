@@ -1,0 +1,308 @@
+/* common start*/
+.left-col {
+	width: 230px;
+	float: left;
+}
+
+.right-col {
+	width: 860px;
+	float: left;
+}
+
+.mb-30{
+	margin-bottom: 30px;
+}
+
+/* common over*/
+
+
+
+/* purchase start*/
+.purchase {
+	margin: 20px auto;
+}
+
+.purchase .left-col img {
+	width: 100%;
+}
+
+.purchase .right-col {
+	margin-left: 10px;
+}
+
+.purchase .right-col li {
+	width: 23%;
+	margin: 0 1%;
+	float: left;
+	text-align: center;
+	min-height: 260px;
+	padding: 10px;
+	border: 1px rgba(220, 220, 220, 0.4) solid;
+	background-color: #fff;
+}
+
+.purchase .right-col li:hover {
+	box-shadow: 0 10px 15px #e0e0e0;
+	border: none;
+}
+
+.purchase .right-col li img {
+	width: 100%;
+}
+
+.purchase .right-col li span {
+	font-size: 22px;
+	color: #cc0b0e;
+	display: inline-block;
+
+}
+
+.purchase .right-col li span em {
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+.purchase .right-col li p {
+	margin-top: 10px;
+	font-size: 14px;
+	color: #999;
+	height: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+/* purchase over*/
+
+/* purchase-bottom start*/
+.purchase-bottom {}
+
+.purchase-bottom li {
+	float: left;
+	margin-right: 20px;
+	width: 310px;
+	height: 210px;
+	padding: 20px 30px;
+	position: relative;
+	transition: all 0.4s ease-in-out;
+}
+
+
+
+.purchase-bottom li a {
+	position: absolute;
+	bottom: 30px;
+	display: inline-block;
+	width: 50px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #fff;
+	border-radius: 26px;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+}
+
+
+.purchase-bottom li strong {
+	margin: 15px 0;
+	font-size: 20px;
+	display: inline-block;
+}
+
+.purchase-bottom li p {
+	font-size: 16px;
+}
+
+.purchase-bottom li:nth-of-type(1) {
+	width: 440px;
+	background: url(../img/index/index_02.jpg) left top no-repeat;
+	background-size: 100%;
+	color: #fff;
+}
+
+.purchase-bottom li:nth-of-type(1) strong {
+	margin: 15px 0;
+	font-size: 20px;
+}
+
+
+.purchase-bottom li:nth-of-type(1) a {
+	color: rgba(230, 74, 25, 1);
+}
+
+.purchase-bottom li:nth-of-type(2) {
+	background: url(../img/index/index_03.jpg) left top no-repeat;
+	background-size: 100%;
+}
+
+.purchase-bottom li:nth-of-type(2) strong {
+	color: #1f87e8;
+}
+
+.purchase-bottom li:nth-of-type(2) a {
+	background-color: #1f87e8;
+}
+
+.purchase-bottom li:nth-last-of-type(1) {
+	margin-right: 0;
+	background: url(../img/index/index_04.jpg) left top no-repeat;
+	background-size: 100%;
+}
+
+.purchase-bottom li:nth-of-type(3) strong {
+	color: #DA3981;
+}
+
+.purchase-bottom li:nth-of-type(3) a {
+	background-color: #DA3981;
+}
+
+.purchase-bottom li:hover {
+	background-position: 20px top;
+	transition: all 0.4s ease-in-out;
+}
+
+
+/* purchase-bottom over*/
+
+/* productidx start*/
+
+.productidx h3 {
+	font-size: 24px;
+	font-weight: normal;
+	color: #333;
+	line-height: 40px;
+}
+
+.productidx div.title {
+	padding: 20px 0;
+}
+
+.productidx div.title::before {
+	content: "";
+	margin: 9px 10px 0 0;
+	display: inline-block;
+	width: 4px;
+	height: 24px;
+	background-color: #e64a19;
+	line-height: 24px;
+	float: left;
+}
+
+.productidx .left-col{
+	position: relative;
+}
+
+.productidx .left-col p{
+    position: absolute;
+    left: 58px;
+    top: 490px;
+    text-align: center;
+    font-size: 24px;
+	color: #fff;
+}
+
+.productidx .right-col {
+	margin-left: 10px;
+	padding: 20px;
+	background: #fff;
+}
+
+.productidx .right-col li {
+	width: 23%;
+	margin: 0 1%;
+	float: left;
+	text-align: center;
+	min-height: 260px;
+	margin-bottom: 10px;
+	transition: all 0.2s ease-in-out;
+}
+
+
+.productidx .right-col li img {
+	width: 100%;
+	padding: 10px;
+	border: 1px transparent solid;
+	margin-bottom: 5px;
+}
+
+.productidx .right-col li img:hover {
+	border: 1px rgba(220, 220, 220, 0.4) solid;
+}
+
+
+.productidx .right-col li .producttxt {
+	padding: 10px 15px;
+	text-align: left;
+}
+
+
+.productidx .right-col li:hover .producttxt {
+	background: rgba(254, 94, 36, 1);
+	transition: all 0.2s ease-in-out;
+}
+
+.productidx .right-col li:hover .producttxt p,.productidx .right-col li:hover .producttxt span{
+	color: #fff;
+}
+
+.productidx .right-col li .producttxt p {
+	font-size: 16px;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.productidx .right-col li .producttxt p {
+	font-size: 16px;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.productidx .right-col li .producttxt span {
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.productidx .right-col li .producttxt span em{
+    margin-right: 5px;
+}
+
+/* fourlist-style start*/
+
+
+.hat div.title::before{
+	background-color:#1f87e8 ;
+}
+
+.shoe div.title::before{
+	background-color:#8e24aa;
+}
+
+.chest div.title::before{
+	background-color:#eb4165;
+}
+
+.hat .right-col li:hover .producttxt{
+	background-color:#1f87e8 ;
+}
+
+.shoe .right-col li:hover .producttxt{
+	background-color:#8e24aa;
+}
+
+.chest .right-col li:hover .producttxt{
+	background-color:#eb4165;
+}
+
+
+
+/* fourlist-style over*/
+
+/* productidx over*/

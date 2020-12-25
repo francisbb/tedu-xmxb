@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show(){
+				//获取请求数据
+				var _did=did.value;
+				var _product_name=product_name.value;
+				var _product_detail=product_detail.value;
+				var _productid=productid.value;
+				var arr=[_did,_product_name,_product_detail,_productid]
+				for(var i=0;i<arr.length;i++){
+					if(!arr[i]){
+						msg.innerHTML=`${arr[i]}不能为空`
+						return;
+					}
+				}
+				//创建xhr对象
+				var xhr=new XMLHttpRequest();
+				//打开监听器，监听响应状态
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						if(r==1){
+							msg.innerHTML='添加成功';
+						}
+					}
+				}
+				//创建请求主题
+				var formdata=`did=${_did}&product_name=${_product_name}&product_detail=${_product_detail}&productid=${_productid}}`
+				//打开请求链接
+				xhr.open('post',`/product/add_detail`,true)
+				//设置请求头信息内容类型为任意字符
+				xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded')
+				//向服务器发送请求
+				xhr.send(formdata);
+				
+			}
+		</script>
+	</head>
+	<body>
+		<span style="width: 100px;display: inline-block;">商品图片编号</span><input type="text" id="did" placeholder="请输入商品图片编号"><br>
+		<span style="width: 100px;display: inline-block;">商品名称</span><input type="text" id="product_name" placeholder="请输入商品名称"><br>
+		<span style="width: 100px;display: inline-block;">商品图片</span><input type="text" id="product_detail" placeholder="请输入商品图片"><br>
+		<span style="width: 100px;display: inline-block;">商品编号</span><input type="text" id="productid" placeholder="请输入商品编号"><br>
+		<button onclick="show()">提交</button>
+		<div id="msg"></div>
+	</body>
+</html>

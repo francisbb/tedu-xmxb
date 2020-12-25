@@ -1,0 +1,80 @@
+/* top-nav start */
+
+.uc-bg {
+	background-color: #ff8712;
+}
+
+.top-nav>div>a:nth-of-type(2){
+	border-right: 1px solid #fff;
+}
+
+.top-nav .login-n a:nth-of-type(1) {
+    background-image: url(../img/login_top.png);
+    background-position: left -61px;
+    margin-right: 10px;
+}
+
+/* top-nav over */
+
+/* middle-nav start */
+.middle-nav .logo-box a{
+	float: left;
+}
+
+.middle-nav .logo-box p{
+	float: left;
+	line-height: 30px;
+	padding-left: 15px;
+	margin: 15px 0 15px 20px;
+	border-left: 1px solid #ddd;
+	font-size: 20px;
+}
+
+.middle-nav ul{
+	float:right;
+}
+
+.middle-nav ul li{
+	float:left;
+	margin:50px 10px 0 ;
+}
+
+.middle-nav ul li::before{
+	content: "";
+	display: inline-block;
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin-right: 4px;
+	background-image: url(../img/ucenter/mall_ico.png);
+}
+
+.middle-nav ul li:hover a{
+	color: #ff8712;
+}
+
+
+.middle-nav ul li:nth-child(1)::before{
+	background-position: -408px 0;
+}
+
+.middle-nav ul li:nth-child(2)::before{
+	background-position: -105px 0;
+}
+
+.middle-nav ul li:nth-child(3)::before{
+	background-position: -164px 0;
+}
+
+.middle-nav ul li:nth-child(4)::before{
+	background-position: -224px 0;
+}
+
+.middle-nav ul li:nth-child(5)::before{
+	background-position: -282px 0;
+}
+
+.middle-nav ul li:nth-child(6)::before{
+	background-position: -342px 0;
+}
+/* middle-nav over */

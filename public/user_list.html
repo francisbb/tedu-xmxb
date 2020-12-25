@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+					function show(){
+						//1.创建xhr异步对象
+						var xhr=new XMLHttpRequest();
+						//4.接收响应，创建监听
+						xhr.onreadystatechange=function(){
+							if(xhr.readyState==4 && xhr.status==200){
+								var r=xhr.responseText;
+								console.log(typeof(r));
+								//字符串--->obj
+								var arr=JSON.parse(r);
+								//结构字符串htmlStr-------1.表头
+								var htmlStr=`
+									<table width="800px" border="1"  align="center">
+										<tr>
+											<th>用户编号</th>
+											<th>用户名称</th>
+											<th>用户邮箱</th>
+											<th>用户密码</th>
+											<th>联系方式</th>
+											<th>真实姓名</th>
+											<th>用户性别</th>
+											<th>用户头像</th>
+											<th>操作</th>
+										</tr>
+								`;
+								//结构字符串htmlStr-------2.循环
+								for(var i=0;i<arr.length;i++){
+									var gender="保密";
+									if(arr[i].gender==1){
+										gender="男";
+									}else if(arr[i].gender==0){
+										gender="女";
+									}else{
+										gender="保密";
+									}
+									htmlStr+=`
+										<tr align="center">
+											<td>${arr[i].uid}</td>
+											<td>${arr[i].uname}</td>
+											<td>${arr[i].email}</td>
+											<td>${arr[i].password}</td>
+											<td>${arr[i].phone}</td>
+											<td>${arr[i].user_name}</td>
+											<td>${gender}</td>
+											<td>${arr[i].avater}</td>
+											<td>
+												<a href="#">修改</a>
+												<a href="#">删除</a>
+											</td>
+										</tr>
+									`;
+								}
+								//结构字符串htmlStr-------3.表结束
+								htmlStr+=`</table>`;
+								d1.innerHTML=htmlStr;
+							}
+						}
+						//2.创建请求，打开连接
+						xhr.open("get",`/user/alluser`,true);
+						//3.发送请求
+						xhr.send();
+					}
+				</script>
+	</head>
+	<body onload="show()">
+			<!-- <button onclick="show()">显示</button> -->
+			<div id="d1">用户列表</div><br>
+			<a href="http://127.0.0.1:8080/user.html">返回</a>
+			
+		</body>
+</html>

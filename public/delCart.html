@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+				function del(){
+					var _cid=cid.value;	
+					
+					let xhr = new XMLHttpRequest();
+					
+					xhr.onreadystatechange= function(){
+						if(xhr.readyState==4&&xhr.status==200){
+							var r = xhr.responseText;
+							d1.innerHTML= r;
+						}
+					}
+					
+					xhr.open("delete",`/ucenter/delCart/${_cid}`,true);
+
+					xhr.send();
+				}
+		</script>
+	</head>
+	<body>
+			<label>购物车编号：</label><input type="text" id="cid"><br/>
+			<button onclick="del()">提交</button>
+			<span id="d1"></span>
+	</body>
+</html>

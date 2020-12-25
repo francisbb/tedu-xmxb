@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- <script type="text/javascript">
+			function up(){
+				//0.接收用户的数据
+				var _uname=uname.value;
+				var _email=email.value;
+				var _password=password.value;
+				var _phone=phone.value;
+				var _user_name=user_name.value;
+				var _gender=genfer.value;
+				var _avater=avater.value;
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						d1.innerHTML=r;
+					}
+				}
+				xhr.open("post",`/user/restful_update`,true);
+				var formdata=(`uname=${_uname}&email=${_email}&password=${_password}&phone=${_phone}&user_name=${_user_name}&gender=${_gender}&avater=${_avater}`);
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				xhr.send(formdata);
+			}
+		</script> -->
+	</head>
+	<body>
+		<h2>用户修改</h2>
+		<form method="post" action="/user/update">
+			用户编号: <input type="text" name="uid" placeholder="请输入用户编号" /><br>
+			用户名称: <input type="text" name="uname" placeholder="请输入用户名" /><br>
+			邮箱地址: <input type="text" name="email" placeholder="请输入邮箱地址" /><br>
+			用户密码: <input type="text" name="password" placeholder="请输入密码"/><br>
+			手机号码: <input type="text" name="phone" placeholder="请输入手机号码" /><br>
+			真实姓名: <input type="text" name="user_name" placeholder="请输入真实姓名" /><br>
+			用户性别: <input type="text" name="gender" placeholder="请输入性别" /><br>
+			用户头像: <input type="text" name="avater" placeholder="请设置头像" /><br>
+			 <input type="submit"><br>
+			 <a href="http://127.0.0.1:8080/user.html">返回</a>
+			</form>
+<!-- 			<button onclick="login()">修改完成</button>
+			<div id="d1"></div> -->
+	</body>
+</html>

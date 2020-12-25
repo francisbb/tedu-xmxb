@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show(){
+				//获取请求数据
+				var _pid=pid.value;
+				var _pname=pname.value;
+				var _stock=stock.value;
+				var _price=price.value;
+				var _status=status.value;
+				var _saleNumber=saleNumber.value;
+				var _count=count.value;
+				var _index_img=index_img.value;
+				var _family_id=family_id.value;
+				var _feature_id=feature_id.value;
+				//创建xhr对象
+				var xhr=new XMLHttpRequest();
+				//打开监听器，判断响应的状态码
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						if(r==1){
+							alert('添加成功');
+						}else{
+							alert('输入信息不能为空');
+						}
+					}
+				}
+				//创建请求主体
+				var formdata=(`pid=${_pid}&pname=${_pname}&stock=${_stock}&price=${_price}&status=${_status}&saleNumber=${_saleNumber}&count=${_count}&index_img=${_index_img}&family_id=${_family_id}&feature_id=${_feature_id}`)
+				//打开链接
+				xhr.open('post','/product/add',true)
+				//设置请求头信息为
+				xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+				//发送请求
+				xhr.send(formdata);
+			}
+		</script>
+	</head>
+	<body>
+			<span style="width: 70px;display: inline-block;">商品编号</span><input type="text" id="pid" placeholder="请输入商品编号"><br>
+			<span style="width: 70px;display: inline-block;">商品名称</span><input type="text" id="pname" placeholder="请输入商品名称"><br>
+			<span style="width: 70px;display: inline-block;">库存</span><input type="text" id="stock" placeholder="请输入库存量"><br>
+			<span style="width: 70px;display: inline-block;">价格</span><input type="text" id="price" placeholder="请输入价格"><br>
+			<span style="width: 70px;display: inline-block;">是否在售</span><input type="text" id="status" placeholder="是否在售"><br>
+			<span style="width: 70px;display: inline-block;">记录购买件数</span><input type="text" id="saleNumber" placeholder="已售出多少件"><br>
+			<span style="width: 70px;display: inline-block;">记录购买数量</span><input type="text" id="count" placeholder="记录购买数量"><br>
+			<span style="width: 70px;display: inline-block;">首页图片</span><input type="text" id="index_img" placeholder="插入首页图片"><br>
+			<span style="width: 70px;display: inline-block;">商品类别</span><input type="text" id="family_id" placeholder="请输入商品类别"><br>
+			<span style="width: 70px;display: inline-block;">特色类别</span><input type="text" id="feature_id" placeholder="请输入商品编号"><br>
+			<button onclick="show()">提交</button>
+		
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function login(){
+				//0.获取用户填入的信息
+				var _uname=uname.value;
+				//1.获取xhr异步对象
+				var xhr=new XMLHttpRequest();
+				//4.获取响应，创建监听
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						d1.innerHTML=r;
+					}
+				}
+				//2.创建请求，打开连接
+				xhr.open("get",`/user/restful_exists/${_uname}`,true);
+				//3.发送请求
+				xhr.send();
+			}
+		</script>
+	</head>
+	<body>
+		<h2>检测用户是否存在</h2>
+		用户名称:<input type="text" id="uname" placeholder="请输入用户名" /><br>
+		<button onclick="login()">检测</button><br>
+		<div id="d1"></div>
+		<a href="http://127.0.0.1:8080/user.html">返回</a>
+	</body>
+</html>

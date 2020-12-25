@@ -1,0 +1,142 @@
+/*详情页body1给个白色背景*/
+.white{
+	background-color: #FFFFFF;
+}
+/*详情第一张图片的代码*/
+.detail-one-family{
+	width: 400px;height: 400px;
+	text-align: left;
+	margin: ;
+	float: left;
+}
+.detail-img1{
+	width: 100%;height: 100%;
+	object-fit: contain;
+}
+/*文字信息代码*/
+.content-family{
+	width: 450px;height: 450px;
+	float: left; 
+	text-align: left;
+	padding-top:5px ;
+}
+/*给详细页商品标题做修饰*/
+.title-family{
+	margin-bottom: 20px;
+}
+
+.title-text{
+	font:bold 20px 黑体 ;
+	color: #000000;
+}
+.text-family{
+	margin-bottom: 20px;
+}
+.text-price{
+  margin-bottom: 30px;
+}
+/*默认按钮的样式*/
+.button{
+	width: 66px;height: 35px;
+	border: 2px solid #f00;
+	background-color: #fff;
+  color: #f00;
+}
+/*数量按钮设置*/
+.number{
+	background-color: rgba(0,0,0,5%);
+}
+/*价格字体样式设置*/
+.money{
+	color: #f00;
+	font-size: 15px;
+}
+.price{
+	color: #cc0c0f;
+	font:600 32px Arial;
+}
+/*购买按钮样式设置*/
+.buy{
+	width: 135px;height: 40px;
+	border: 1px solid #FE217E;
+	border-radius: 3px;
+	background-color: #FE217E;
+	color: #fff;
+}
+.add{
+	width: 150px;height: 40px;
+	border-radius: 3px;
+	border: 1px solid #FE217E;
+	background-color: beige;
+}
+.buy:hover{
+	background-color: #fff;
+	color: #FE217E;
+}
+.add:hover{
+	background-color: #fff;
+	color: #FE217E;
+}
+/*设置三张小图的样式*/
+.detail-img2{
+	clear: both;
+	margin-bottom: 40px;
+	margin-left: 20px;
+}
+.img3{
+	width: 70px;height: 70px;
+}
+.img3:hover{
+	border: 3px solid #FE217E;
+}
+.a-text{
+	color: #666666;
+}
+.a-text:hover{
+	color: #FE217E;
+}
+/*结束第一个块级的内容*/
+/*第二块的div样式设置*/
+.shop-family{
+	background-color: rgba(100,100,100,10%);
+}
+/*a标签浮动*/
+.shop{
+	width: 100px;height: 45px;
+	font-size: 15px;
+	float: left;
+	text-align: center;
+	line-height: 45px;
+}
+
+.shop:hover{
+	background-color:#FE217E;
+	color: #FFFFFF;
+}
+
+.s-active{
+	background-color:#FE217E;
+	color: #FFFFFF;
+}
+
+.green{
+	height: 40px;
+}
+
+/*设置放置图片的边框样式*/
+.detail-family{
+	background-color: #fff;
+	text-align: center;
+}
+
+.detail-family+.detail-family{
+	display: none;
+}
+
+/*商品评论信息*/
+
+.observe-img{
+	height: 250px;
+	line-height:41px;
+	margin-top: 123px;
+}

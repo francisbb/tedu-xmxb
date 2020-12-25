@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name='keywords' content="">
+	<meta name='description' content="">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/product_detail.css">
+	<script>
+
+		/*宝贝详细块代码*/
+			function detail(){
+				d2.style="display:none";
+				d1.style="display:block";
+				a1.style="background-color: #FE217E;color:#fff";
+				a2.style="background-color: rgba(100,100,100,10%);color:#000";
+			}
+			/*商品评论块代码*/
+			function observe(){
+				d1.style="display:none";
+				d2.style="display:block";	
+				a2.style="background-color:#FE217E;color:#fff";
+				a1.style="background-color: rgba(100,100,100,10%);color:#000";
+			}
+			
+		</script>
+	<html>
+</head>
+<body onload="getProductDetail()">
+	<iframe src="include/header.html" frameborder="0" width="100%" height="203px" scrolling="no"></iframe>
+	<iframe src="include/banner.html" frameborder="0" width="100%" height="360px" scrolling="no"></iframe>
+	<section>
+		<!--详情第一张图片的代码-->
+		<div id="test"></div>
+		<div class="container-box clearfix white">
+			<div id="" class="detail-one-family">
+				<img src="img/product_detail/xiangzi1.jpg" alt="箱子1" class="detail-img1">
+			</div>
+			<!--文字信息代码-->
+			<div id="" class="content-family">
+				<div class="title-family">
+					<p id="" class="title-text">ELLE铝框拉杆箱</p>
+				</div>
+				<div class="text-family">
+					<p id="" class="text">库存：64</p>
+				</div>
+				<div class="text-family">
+					<p id="" class="text">销量：0</p>
+				</div>
+				<div class="text-family">
+					<span class="text">规格：</span><input type="button" value="默认" class="button">
+				</div>
+				<div class="text-family">
+					<p id="" class="text">数量：<input type="number" min="1" max="30" value="1" class="number"></p>
+				</div>
+				<div class="text-price">
+					<p id="" class="text">价格：<span class="money">￥ </span><span id="" class="price">499.00</span></p>
+				</div>
+				<div>
+					<button id="" class="buy">立即购买</button>&nbsp;
+					<button id="" class="add">加入购物车</button>
+				</div>
+			</div>
+			<div id="" class="detail-img2">
+				<img src="img/product_detail/xiangzi1.jpg" alt="图一" class="img3">
+				<img src="img/product_detail/z1.jpg" alt="图二" class="img3">
+				<img src="img/product_detail/zz13.jpg" alt="图三" class="img3">
+				<br>
+				<br>
+				<a href="#" class="a-text">收藏</a>|
+				<a href="" class="a-text">我的收藏夹</a>
+			</div>
+		</div>
+		<!--第二块按钮及图片的代码-->
+		<div class="container-box clearfix shop-family">
+			<a href="javascript:detail()" class="shop s-active" id="a1">商品详情</a>
+			<a href="javascript:observe()" class="shop" id="a2">商品评论</a>
+		</div>
+		<div class="container-box clearfix green"></div>
+		<!--放置详情图片的块-->
+		<div class="container-box clearfix detail-family" id="d1">
+			<p>
+				<img src="img/product_detail/zza1.jpg" alt="图一">
+			</p>
+			<p>
+				<img src="img/product_detail/zza2.jpg" alt="图二">
+			</p>
+			<p>
+				<img src="img/product_detail/zza3.jpg" alt="图三">
+			</p>
+			<p>
+				<img src="img/product_detail/zza4.jpg" alt="图四">
+			</p>
+			<p>
+				<img src="img/product_detail/zza5.jpg" alt="图五">
+			</p>
+		</div>
+		<!--商品评论代码块-->
+		<div class="container-box clearfix detail-family" id="d2">
+			<table></table>
+			<h4 class="observe-img">
+				<img src="img/product_detail/zza6.jpg" alt="图六" class="observe">暂时没有评论哦！
+			</h4>
+		</div>
+
+	</section>
+	<iframe src="include/footer.html" frameborder="0" width="100%" height="229px" scrolling="no"></iframe>
+	<script src="js/product_detail.js"></script>
+</body>
+</html>

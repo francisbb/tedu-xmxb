@@ -41,13 +41,7 @@ function getProductDetail() {
 		var htmlstr='';
 		
 			htmlstr+=`
-			<div class="contain">
-				<a href="product_list.html?pid=${arr[0].pid}">
-					<img src="img/index/${arr[0].index_img}" alt="">
-					<span><em>¥</em>${arr[0].price}</span>
-					<p>${arr[0].pname}</p>
-				</a>
-			</div>
+		
 			`
 		test.innerHTML=htmlstr;
 	})

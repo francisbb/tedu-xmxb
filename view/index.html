@@ -101,9 +101,9 @@
 						</ul>
 					</div>
 					<ul class="mainnav">
-						<li><a href="" class="nav-active">首页</a></li>
-						<li><a href="">新品</a></li>
-						<li><a href="">爆款</a></li>
+						<li><a href="/index.html" class="nav-active">首页</a></li>
+						<li><a href="/product_new.html">新品</a></li>
+						<li><a href="/product_hot.html">爆款</a></li>
 					</ul>
 				</div>
 			</div>
@@ -582,13 +582,19 @@
 			var swiper = new Swiper('.swiper-container', {
 				pagination: {
 					el: '.swiper-pagination',
-					loop: true
+					loop: true,
+					clickable :true
+				},
+				autoplay: {
+				  delay: 3000,
+				  stopOnLastSlide: false,
+				  disableOnInteraction: false
 				},
 				navigation: {
 				    nextEl: '.swiper-button-next',
 				    prevEl: '.swiper-button-prev',
 				},
-				loop: true,
+				loop: true
 			});
 		</script>
 	</body>

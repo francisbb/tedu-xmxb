@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login-header.css"> 
+    <link rel="stylesheet" href="css/rigister.css">
+    
+    
+</head>
+<body class="body-bg">
+    <header>
+        <div class="top1-wrapper">
+            <div><img src="img/logo.png"></div>
+            <p>会员登录</p>
+            <div id="d1">
+                <p>
+                   <span>没有会员账号?</span>
+                   <button class="login-link">登录</a>    
+                </p>
+                
+            </div>
+        </div>
+    </header>
+    <section>
+    <div class="rigister-content">
+       <div>
+           <span>
+               <span class="star-color">*</span>
+               用户名
+            </span>
+            <br>
+            <input type="text">
+       </div>
+       <div>
+        <span>
+            <span class="star-color">*</span>
+            密码
+         </span>
+         <br>
+         <input type="text">
+       </div>
+       <div>
+        <span>
+            <span class="star-color">*</span>
+            确认密码
+         </span>
+         <br>
+         <input type="text">
+       </div>
+       <div>
+        <span>
+            <span class="star-color">*</span>
+            邮箱
+         </span>
+         <br>
+         <input type="text">
+       </div>
+       <div>
+       <span>
+        <span class="star-color">*</span>
+        验证码
+       </span>
+       <div class="verify">
+         <input type="text" class="verify-input">
+         <div class="verify-img">
+         <img src="img/logo.png" alt="" class="verify-content">
+        </div>
+       </div> 
+      </div>
+      </div>
+    
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="commit-content">
+                <div class="commit-button">
+                <input type="checkbox">
+                </div>
+                <a href="" class="sure">我同意“服务条款”及“法律声明”</a>
+            </div>
+            <div><a href="" class="submmit">提交</a></div>
+        </div>
+        <div class="footer-end">
+            <p>Copyright © 2019 理想箱包鞋帽公司版权所有  本站内容、图片、视频为网站模板演示数据，如有涉及侵犯版权，请联系我们提供书面反馈，我们核实后会立即删除。</p>
+        </div>
+    </footer>
+    <script>
+
+       /*通过id获得对象*/
+       var rigister=document.getElementsByClassName("rigister-content")[0];
+       console.log(rigister)
+       /*获得rigister下的input*/
+       var arr=rigister.getElementsByTagName("input");
+       console.log(arr);
+
+    </script>
+</body>
+</html>

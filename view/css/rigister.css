@@ -1,0 +1,157 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+.body-bg{
+    /*background:rgba(200, 80, 90, 0.2);*/
+    background: url(../img/rigister/rigiste1.png) no-repeat;
+    background-size: cover;
+}
+/*
+.rigister-content{
+    display: flex;
+    justify-content: center; 
+}
+*/
+
+/*login-top start*/
+.top1-wrapper{
+	display:flex;
+	flex-wrap: wrap ;
+	padding: 7px;
+	text-indent:100px;
+}
+.top1-wrapper>p{
+	line-height: 60px;
+}
+#d1{
+	font-size: 7px;
+	text-indent:600px;
+	line-height: 60px;
+}
+
+.d2{
+	padding-top:2px;
+	padding-bottom:2px ;
+}
+.register{
+	text-decoration: none;
+	margin: 1px 10px 1px 10px;
+	color: #000000;
+}
+.top1-wrapper>img{
+	border: 1px solid darkgray;
+	border-radius: 3px;
+}
+
+/*login-top over*/
+
+.login-link{
+    width: 55px;height: 35px;
+    background-color: #fe217e;
+}
+
+
+.rigister-content{
+    width: 60%;
+    background-color: rgba(125, 125,125, 0.2);
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-left:20% ;
+    padding: 2%;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.rigister-content>div{
+    margin-bottom: 20px;
+}
+
+.cover{
+    height: 600px;
+    flex: 0 0 50%;
+}
+.cover-img{
+    width: 100%;
+}
+.rigister-detail{
+    flex: 0 0 50%;
+}
+.star-color{
+    color: red;
+}
+input{
+    width: 80%;
+    height: 40px;
+    border: 1px solid rgba(125, 125,125, 0.5);
+    border-radius: 4px;
+    background: rgba(125, 125,125, 0.1);
+    
+    outline: none;
+}
+.verify{
+    display: flex;
+    align-items: center;
+}
+
+.verify-input{
+    width: 55%;
+    margin-right: 5%;
+    
+
+}
+.verify-img{
+    flex: 0 0 20%;
+}
+.verify-img>img{
+    width: 100%;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.sure{
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.commit-button{
+   margin-right: 5px;
+   display: inline-block;
+}
+.commit-button>input{
+    width: 15px;height: 15px;
+    margin-right: 2px;
+}
+.submmit{
+    display: inline-block;
+    width: 200px;height: 40px;
+    background-color:#fe217e;
+    border: 1px solid #fe217e;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    color:white;
+}
+.submmit:hover{
+    background-color: rgba(125, 125,125, 0.2);
+    color: #000;
+}
+.commit-content{
+    margin-bottom: 20px;
+}
+.footer-end{
+    text-align: center;
+    font-size: 14px;
+    padding:50px;
+    margin-bottom: 30px;
+    
+}
+

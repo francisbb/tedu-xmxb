@@ -29,14 +29,15 @@
 	<html>
 </head>
 <body>
-	<iframe src="include/header.html" frameborder="0" width="100%" height="203px" scrolling="no"></iframe>
+	<iframe src="include/header.html" frameborder="0" width="100%" height="188px" scrolling="no"></iframe>
 	<iframe src="include/banner.html" frameborder="0" width="100%" height="360px" scrolling="no"></iframe>
 	<section>
 		<!--详情第一张图片的代码-->
-		<div id="test"></div>
 		<div class="container-box clearfix white">
-			<div id="" class="detail-one-family">
-				<img src="img/product_detail/xiangzi1.jpg" alt="箱子1" class="detail-img1">
+			<div id="" class="container">
+				<div class="target" id="content1" style="z-index: 10;"><img src="img/product_detail/zz11.jpg" alt="箱子1" class="detail-img1"></div>
+				<div class="target" id="content2"><img src="img/product_detail/zz12.jpg" alt="箱子"></div>
+				<div class="target" id="content3"><img src="img/product_detail/zz13.jpg" alt="箱子"></div>
 			</div>
 			<!--文字信息代码-->
 			<div id="" class="content-family">
@@ -52,8 +53,10 @@
 				<div class="text-family">
 					<span class="text">规格：</span><input type="button" value="默认" class="button">
 				</div>
-				<div class="text-family">
-					<p id="" class="text">数量：<input type="number" min="1" max="30" value="1" class="number"></p>
+				<div class="text-family buy-cont" id="cont">
+					<button class="buy-cont-button">-</button>
+					<input type="text" class="cont" placeholder="1" value="1">
+					<button class="buy-cont-button">+</button>
 				</div>
 				<div class="text-price">
 					<p id="" class="text">价格：<span class="money">￥ </span><span id="" class="price">499.00</span></p>
@@ -63,10 +66,12 @@
 					<button id="" class="add">加入购物车</button>
 				</div>
 			</div>
-			<div id="" class="detail-img2">
-				<img src="img/product_detail/xiangzi1.jpg" alt="图一" class="img3">
-				<img src="img/product_detail/z1.jpg" alt="图二" class="img3">
-				<img src="img/product_detail/zz13.jpg" alt="图三" class="img3">
+			
+			
+			<div class="detail-img2-contair">
+				<a href="javascript:;" data-change="img" data-target="content1"><img src="img/product_detail/zz11.jpg" alt="图一" class="img3"></a>
+				<a href="javascript:;" data-change="img" data-target="content2"><img src="img/product_detail/zz12.jpg" alt="图二" class="img3"></a>
+				<a href="javascript:;" data-change="img" data-target="content3"><img src="img/product_detail/zz13.jpg" alt="图三" class="img3"></a>
 				<br>
 				<br>
 				<a href="#" class="a-text">收藏</a>|
@@ -108,5 +113,49 @@
 	</section>
 	<iframe src="include/footer.html" frameborder="0" width="100%" height="229px" scrolling="no"></iframe>
 	<script src="js/product_detail.js"></script>
+	<script>
+		//获取触发事件的元素
+		var buttons=document.getElementById("cont").getElementsByTagName("button");
+		//绑定事件处理函数
+		for(var button of buttons){
+			button.onclick=function(){
+				//获取需要修改的元素
+			   var input=this.parentElement.children[1];
+			  /* console.log(input);*/
+				 var n=parseInt(input.value);
+				/* console.log(n);*/
+				if(this.innerHTML=="+"){
+                        n++;
+				}else if(n>1){
+					n--;
+				}
+				input.value=n;
+			}
+		}
+		//制作图片选择事件
+		//查找触发事件的元素
+		var as=document.querySelectorAll("[data-change=img]");
+		console.log(as);
+		//声明一个变量来保存div的最开始的堆叠顺序
+		var z=10;
+		//所有a都需绑定点击事件,遍历
+		for(var a of as){
+			//为a绑定函数处理事件
+			console.log(a);
+			a.onclick=function(){
+				//获取需要修改的元素，此处需要修改的元素为contai下的div,但是id存在a标签的data-target的属性值中
+			  var id=this.dataset.target;
+			  console.log(id);
+			  //查找目标div
+			  var div=document.getElementById(id);
+			  console.log(div);
+			  
+			  z++;
+			  div.style.zIndex=z;
+
+			}
+		}
+
+	</script>
 </body>
 </html>

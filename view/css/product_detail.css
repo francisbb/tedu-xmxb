@@ -3,11 +3,19 @@
 	background-color: #FFFFFF;
 }
 /*详情第一张图片的代码*/
-.detail-one-family{
+.container{
 	width: 400px;height: 400px;
 	text-align: left;
-	margin: ;
 	float: left;
+	position: relative;
+
+}
+.target{
+	position: absolute;
+
+}
+.target>img{
+	width: 100%;
 }
 .detail-img1{
 	width: 100%;height: 100%;
@@ -43,8 +51,20 @@
   color: #f00;
 }
 /*数量按钮设置*/
-.number{
-	background-color: rgba(0,0,0,5%);
+.buy-cont{
+	display: flex;
+
+}
+.buy-cont-button{
+	width: 40px;height: 40px;
+	background-color: rgba(125, 125, 125, .3);
+	font-size: 32px;
+	color:white;
+}
+.cont{
+	width: 50px;
+	text-align: center;
+	border: 1px solid beige;
 }
 /*价格字体样式设置*/
 .money{
@@ -78,7 +98,7 @@
 	color: #FE217E;
 }
 /*设置三张小图的样式*/
-.detail-img2{
+.detail-img2-contair{
 	clear: both;
 	margin-bottom: 40px;
 	margin-left: 20px;

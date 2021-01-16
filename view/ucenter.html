@@ -16,9 +16,9 @@
 				<div class="top-nav container-box clearfix">
 					<span>您好，xxx！</span>
 					<div class="login-n" id="login-n">
-						<a href="javascript:">首页</a>
-						<a href="javascript:">购物车</a>
-						<a href="javascript:">退出</a>
+						<a href="javascript:;">首页</a>
+						<a href="javascript:;">购物车</a>
+						<a href="javascript:;">退出</a>
 					</div>
 				</div>
 			</div>
@@ -30,9 +30,9 @@
 					<p>会员中心</p>
 				</div>
 				<ul>
-					<li><a href="">会员中心</a></li>
+					<!-- <li><a href="">会员中心</a></li> -->
 					<li><a href="">会员信息</a></li>
-					<li><a href="">我的优惠券</a></li>
+					<!-- <li><a href="">我的优惠券</a></li> -->
 					<li><a href="">收货地址</a></li>
 					<li><a href="">我的收藏</a></li>
 					<li><a href="">我的订单</a></li>
@@ -71,9 +71,9 @@
 							</td>
 							<td class="amount">
 								<div>
-									<a href="javascript:void(0)">-</a>
+									<a href="javascript:;">-</a>
 									<input type="text" value="1">
-									<a href="javascript:void(0)">+</a>
+									<a href="javascript:;">+</a>
 								</div>
 							</td>
 							<td>
@@ -81,7 +81,7 @@
 							</td>
 							<td>
 								<div class="oper">
-									<a href="javascript:void(0)">删除</a>
+									<a href="javascript:;">删除</a>
 									<a href="">移入收藏夹</a>
 								</div>
 							</td>
@@ -101,9 +101,9 @@
 							</td>
 							<td class="amount">
 								<div>
-									<a href="javascript:void(0)">-</a>
+									<a href="javascript:;">-</a>
 									<input type="text" value="1">
-									<a href="javascript:void(0)">+</a>
+									<a href="javascript:;">+</a>
 								</div>
 							</td>
 							<td class="total">
@@ -111,7 +111,7 @@
 							</td>
 							<td>
 								<div class="oper">
-									<a href="javascript:void(0)">删除</a>
+									<a href="javascript:;">删除</a>
 									<a href="">移入收藏夹</a>
 								</div>
 							</td>
@@ -135,7 +135,7 @@
 					<p>宝贝收藏</p>
 				</div>
 				<div class="w-95">
-					<ul class="favourite clearfix">
+					<ul class="favourite clearfix" id="favourite">
 						<li>
 							<a href="">
 								<div class="favourite-pic">
@@ -207,13 +207,13 @@
 					<h4>会员中心</h4>
 				</div>
 				<ul>
-					<li><a href="">个人信息</a></li>
-					<li><a href="">修改密码</a></li>
+					<li data-id="baseinfo" class="active"><a href="javascript:;" >个人信息</a></li>
+					<li data-id="changepw"><a href="javascript:;">修改密码</a></li>
 				</ul>
 			</div>
 			<div class="userinfo-content">
 				<form action="">
-					<div class="base-info clearfix">
+					<div class="base-info clearfix" id="baseinfo">
 						<div>
 							<h4>基本信息</h4>
 						</div>
@@ -257,7 +257,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="change-pw">
+					<div class="change-pw" id="changepw" style="display: none;">
 						<div>
 							<h4>修改密码</h4>
 						</div>
@@ -304,7 +304,7 @@
 					</div>
 				</div>
 				<div class="w-95">
-					<table class="order-table">
+					<table class="order-table" id="order_table">
 						<tr>
 							<th>商品信息</th>
 							<th>规格</th>
@@ -320,17 +320,38 @@
 							<td>
 								默认
 							</td>
-							<td>
+							<td class="price">
 								<p class="discount"><span>¥</span>520.00</p>
-								<p><span>¥</span>490.00</p>
+								<p>¥<span>493.00</span></p>
 							</td>
 							<td class="amount">
 								<div>
 									<span>1</span>
 								</div>
 							</td>
+							<td class="total">
+								<p>¥<span>1497.00</span></p>
+							</td>
+						</tr>
+						<tr>
 							<td>
-								<p><span>¥</span>1497.00</p>
+								<img src="img/index/xiangzi1.jpg" alt="" />
+								<p>ELLE铝框拉杆箱</p>
+							</td>
+							<td>
+								默认
+							</td>
+							<td class="price">
+								<p class="discount"><span>¥</span>520.00</p>
+								<p>¥<span>496.00</span></p>
+							</td>
+							<td class="amount">
+								<div>
+									<span>1</span>
+								</div>
+							</td>
+							<td class="total">
+								<p>¥<span>1497.00</span></p>
 							</td>
 						</tr>
 					</table>
@@ -351,7 +372,7 @@
 				<div class="uc-title address-title clearfix">
 					<p>收货地址</p>
 					<div>
-						<a href="">新增收货地址</a>
+						<a href="" id="addAddress">新增收货地址</a>
 						<a href="">显示全部地址</a>
 					</div>
 				</div>
@@ -362,11 +383,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="add-address">
+			<div class="add-address" id="addressBox">
 				<div class="add-addressbox">
 					<div class="clearfix">
 						<p>地址添加</p>
-						<a href="">×</a>
+						<a href="" id="close_addressbox">×</a>
 					</div>
 					<div>
 						<ul>
@@ -415,6 +436,7 @@
 		<footer>
 			<p>Copyright ©2019 理想箱包鞋帽公司版权所有</p>
 		</footer>
+		<script src="js/jquery-1.11.3.js"></script>
 		<script src="js/ucenter.js"></script>
 	</body>
 </html>

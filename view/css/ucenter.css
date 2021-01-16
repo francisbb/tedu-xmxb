@@ -68,54 +68,54 @@ em {
 }
 
 
-.middle-nav ul li:nth-child(1)::before {
+/* .middle-nav ul li:nth-child(1)::before {
 	background-position: -408px 0;
 }
 
 .middle-nav ul li:nth-child(1):hover::before {
 	background-position: -443px 0;
-}
+} */
 
-.middle-nav ul li:nth-child(2)::before {
+.middle-nav ul li:nth-child(1)::before {
 	background-position: -105px 0;
 }
 
-.middle-nav ul li:nth-child(2):hover::before {
+.middle-nav ul li:nth-child(1):hover::before {
 	background-position: -134px 0;
 }
 
 
-.middle-nav ul li:nth-child(3)::before {
+/* .middle-nav ul li:nth-child(3)::before {
 	background-position: -164px 0;
 }
 
 .middle-nav ul li:nth-child(3):hover::before {
 	background-position: -195px 0;
-}
+} */
 
 
 
-.middle-nav ul li:nth-child(4)::before {
+.middle-nav ul li:nth-child(2)::before {
 	background-position: -224px 0;
 }
 
-.middle-nav ul li:nth-child(4):hover::before {
+.middle-nav ul li:nth-child(2):hover::before {
 	background-position: -252px 0;
 }
 
-.middle-nav ul li:nth-child(5)::before {
+.middle-nav ul li:nth-child(3)::before {
 	background-position: -282px 0;
 }
 
-.middle-nav ul li:nth-child(5):hover::before {
+.middle-nav ul li:nth-child(3):hover::before {
 	background-position: -313px 0;
 }
 
-.middle-nav ul li:nth-child(6)::before {
+.middle-nav ul li:nth-child(4)::before {
 	background-position: -342px 0;
 }
 
-.middle-nav ul li:nth-child(6):hover::before {
+.middle-nav ul li:nth-child(4):hover::before {
 	background-position: -371px 0;
 }
 
@@ -396,7 +396,7 @@ input[type=checkbox]:checked:after {
 	width: 23%;
 	float: left;
 	margin-right: 2%;
-	padding: 0 10px;
+	padding: 0 10px 10px 0;
 	background-color: #fff;
 	border: 1px solid #efefef;
 }
@@ -420,6 +420,8 @@ input[type=checkbox]:checked:after {
 	padding: 15px 0;
 	border-bottom: 1px dashed #ddd;
 }
+
+
 
 .userinfo-nav ul>li::before {
 	content: "";
@@ -450,6 +452,19 @@ input[type=checkbox]:checked:after {
 .userinfo-nav ul>li a:hover {
 	color: #ff8712;
 }
+
+.userinfo-nav ul>li.active1 a,.userinfo-nav ul>li.active2 a{
+	color: #ff8712;
+}
+
+.userinfo-nav ul>li.active1::before{
+	background-position: -79px -34px;
+}
+
+.userinfo-nav ul>li.active2::before{
+	background-position: -120px -34px;
+}
+
 
 
 

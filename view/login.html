@@ -3,67 +3,51 @@
 	<head>
 		<meta charset="utf-8">
 		<title>会员登录</title>
-		<link rel="stylesheet" href="css/login-header.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/login.css">
 	</head>
 	<body>
 		<header>
-			<div class="top1-wrapper">
-				<div><img src="img/logo.png"></div>
-				<p>会员登录</p>
-				<div id="d1">
-					<p>没有会员账号? </p>
+			<div class="top">
+				<div class="top-logo">
+					<a href="/index.html">
+						<img src="img/login/logo.png" alt="">
+					</a>
+					<div class="login-n " id="login-n">
+						<span class="login-n1 " href="javascript:">会员登陆</span>
+						<span class="login-n2" href="javascript:">没有会员账号？<button href="" class="btn">注册</button></span>
+					</div>
 				</div>
 			</div>
 		</header>
-		<content>
-			<div id="content">
-				<table></table>
-				<div class="black">
-					<table>
-						<tr>
-							<td>
-								<p>用户登录</p>
-							</td>
-							<td align="right"><a href="#">新用户注册</a></td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<hr>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<input type="text" id="uname" placeholder="请输入用户名">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<span id="msg">用户名不能为空</span>
-							</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<input type="text" id="upwd" placeholder="请输入用户密码">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input type="checkbox" id="auto">
-								<label for="auto">自动登录</label>
-							</td>
-							<td align="right">
-								<a href="#">忘记密码</a>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<button>登录</button>
-							</td>
-						</tr>
-					</table>
+		<div id="content">
+			<div class="module background">
+				<div class="user">
+					<div class="login-flex">
+						<ul>
+							<span class="d1name">用户名称</span>
+							<li><input type="text" id="uname" placeholder="请输入用户名"></li>
+							<!-- <li><span class="msg">用户名不能为空</span></li> -->
+							<li><span class="d1name">用户密码</span></li>
+							<li><input type="text" id="upwd" placeholder="请输入用户密码">
+							<li>
+							<li><span class="d1name">验证码</span></li>
+							<li><input type="text" id="upwd" placeholder="请输入正确的的验证码">
+							<li>
+						</ul>
+						<input class="choice" type="checkbox" id="auto" >
+						<label for="auto">自动登录</label>
+						<div align="right">
+							<a class="btn2" href="#">忘记密码</a>
+							<button class="btn1">登录</button>
+						</div>
+					</div>
 				</div>
 			</div>
-		</content>
+		</div>
+		<div class="footer-bottom">
+			<p>Copyright © 2019 理想箱包鞋帽公司版权所有</p>
+			<p>本站内容、图片、视频为网站模板演示数据，如有涉及侵犯版权，请联系我们提供书面反馈，我们核实后会立即删除</p>
+		</div>
 	</body>
 </html>

@@ -7,45 +7,18 @@
     background: url(../img/rigister/rigiste1.png) no-repeat;
     background-size: cover;
 }
-/*
-.rigister-content{
-    display: flex;
-    justify-content: center; 
-}
-*/
-
-/*login-top start*/
+/*header style*/
 .top1-wrapper{
-	display:flex;
-	flex-wrap: wrap ;
-	padding: 7px;
-	text-indent:100px;
-}
-.top1-wrapper>p{
+	display: flex;
+	justify-content: space-around;
 	line-height: 60px;
+	padding-top: 5px;
+	font-size: 12px;
 }
-#d1{
-	font-size: 7px;
-	text-indent:600px;
-	line-height: 60px;
-}
+/*header style end*/
 
-.d2{
-	padding-top:2px;
-	padding-bottom:2px ;
-}
-.register{
-	text-decoration: none;
-	margin: 1px 10px 1px 10px;
-	color: #000000;
-}
-.top1-wrapper>img{
-	border: 1px solid darkgray;
-	border-radius: 3px;
-}
 
-/*login-top over*/
-
+/*section style*/
 .login-link{
     width: 55px;height: 35px;
     background-color: #fe217e;
@@ -108,6 +81,10 @@ input{
 .verify-img>img{
     width: 100%;
 }
+/*section style end*/
+
+
+/*footer style*/
 .footer{
     display: flex;
     flex-direction: column;
@@ -118,7 +95,7 @@ input{
 .sure{
     text-decoration: none;
     color: #000000;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 15px;
 }
 
@@ -149,7 +126,7 @@ input{
 }
 .footer-end{
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     padding:50px;
     margin-bottom: 30px;
     
